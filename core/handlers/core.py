@@ -36,4 +36,4 @@ class CoreHandler:
 
         # Admin get a message that the user requested the CV
         text = CoreMessage.GET_USER_REQUEST_CV.format(username=message.from_user.username)
-        await bot.send_message(chat_id=message.from_user.id, text=text, parse_mode="HTML")
+        await bot.send_message(chat_id=Config.ADMIN_ID, text=text, parse_mode="HTML")

@@ -26,3 +26,12 @@ class BasicHandler:
         await bot.send_message(
             chat_id=message.from_user.id, text=BasicMessage.GET_CONTACT_MESSAGE_EN, parse_mode="HTML"
         )
+
+    @staticmethod
+    async def get_about(message: Message, bot: Bot) -> None:
+        """
+        Sends a message triggered by /about command
+        """
+        await bot.send_message(
+            chat_id=message.from_user.id, text=BasicMessage.GET_ABOUT_MESSAGE_EN, parse_mode="HTML"
+        )

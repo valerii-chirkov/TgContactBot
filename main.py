@@ -51,6 +51,7 @@ async def start() -> None:
     dp.message.register(BasicHandler.get_start, Command(commands=["start", "run"]))
     dp.message.register(BasicHandler.get_help, Command(commands=["help"]))
     dp.message.register(BasicHandler.get_contact, Command(commands=["contact"]))
+    dp.message.register(BasicHandler.get_about, Command(commands=["about"]))
     dp.message.register(CoreHandler.get_resume, Command(commands=["resume", "cv"]))
 
     dp.message.register(CoreHandler.route_message_to_admin)
