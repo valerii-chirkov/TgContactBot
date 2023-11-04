@@ -1,13 +1,17 @@
 import asyncio
 import logging
+import os
 
-from aiogram import Bot, Dispatcher, types
+from aiogram import Bot, Dispatcher
 from aiogram.filters import Command
 
 from core.handlers import BasicHandler, CoreHandler
 from core.utils import set_commands
 from core import Config
 from core.utils import SystemMessage
+
+
+os.environ["WORKING_DIR"] = os.getcwd()
 
 
 async def start_bot(bot: Bot) -> None:
@@ -47,6 +51,7 @@ async def start() -> None:
     dp.message.register(BasicHandler.get_start, Command(commands=["start", "run"]))
     dp.message.register(BasicHandler.get_help, Command(commands=["help"]))
     dp.message.register(BasicHandler.get_contact, Command(commands=["contact"]))
+    dp.message.register(CoreHandler.get_resume, Command(commands=["resume", "cv"]))
 
     dp.message.register(CoreHandler.route_message_to_admin)
 

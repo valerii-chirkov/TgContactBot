@@ -52,3 +52,4 @@ class BasicMessage:
 class CoreMessage:
     GET_MESSAGE_ROUTED_TO_ADMIN_EN = "Your message successfully sent to the admin!"
     GET_MESSAGE_TEXT = "User: @{username}\n" "Sent message: {text}"
+    GET_USER_REQUEST_CV = "User: @{username} requested cv"
