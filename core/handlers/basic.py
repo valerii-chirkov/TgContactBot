@@ -32,6 +32,4 @@ class BasicHandler:
         """
         Sends a message triggered by /about command
         """
-        await bot.send_message(
-            chat_id=message.from_user.id, text=BasicMessage.GET_ABOUT_MESSAGE_EN, parse_mode="HTML"
-        )
+        await bot.send_message(chat_id=message.from_user.id, text=BasicMessage.GET_ABOUT_MESSAGE_EN, parse_mode="HTML")
