@@ -38,12 +38,14 @@ sudo docker-compose up --build -d
 **User sends a message:**
 - *What user sees:*
 <img src="images/user_send_message.png" style="width: 50%;"/>
+
 - *What admin sees:*
 <img src="images/admin_get_forwarded_message.png" style="width: 50%;"/>
 
 **User requests a cv:**
 - *What user sees:*
 <img src="images/user_request_cv.png" style="width: 50%;"/>
+
 - *What admin sees:*
 <img src="images/admin_notify_cv.png" style="width: 50%;"/>
 
